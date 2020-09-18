@@ -2,7 +2,7 @@ pipeline {
     environment {
         AWSCRED="kaniko-aws-cred"
         AWS_REGION="us-east-2"
-        ECR_REPO="326922585914.dkr.ecr.eu-west-1.amazonaws.com"
+        ECR_REPO="237889007525.dkr.ecr.us-east-2.amazonaws.com"
         ECR_REPO_NAME="kaniko-demo-repo"
     }
     agent {
