@@ -16,7 +16,7 @@ spec:
   - name: "jnlp"
     resources:
       requests:
-        cpu: 200m
+        cpu: 400m
         memory: 400Mi
       limits:
         cpu: 400m
@@ -25,7 +25,7 @@ spec:
     image: amazon/aws-cli 
     resources:
       requests:
-        cpu: 200m
+        cpu: 400m
         memory: 400Mi
       limits:
         cpu: 400m
@@ -37,7 +37,7 @@ spec:
     image: gcr.io/kaniko-project/executor:debug 
     resources:
       requests:
-        cpu: 200m
+        cpu: 400m
         memory: 400Mi
       limits:
         cpu: 400m
