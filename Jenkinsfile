@@ -16,7 +16,7 @@ spec:
   - name: "jnlp"
     resources:
       requests:
-        cpu: 200m
+        cpu: 300m
         memory: 400Mi
       limits:
         cpu: 400m
@@ -25,7 +25,7 @@ spec:
     image: amazon/aws-cli 
     resources:
       requests:
-        cpu: 200m
+        cpu: 300m
         memory: 400Mi
       limits:
         cpu: 400m
