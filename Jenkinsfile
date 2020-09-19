@@ -62,7 +62,6 @@ spec:
                     export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
                     export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
                     export AWS_DEFAULT_REGION=${AWS_REGION}
-                    aws ecr get-login --no-include-email --region ${AWS_REGION}
                     /kaniko/executor -f ${WORKSPACE}/kanikodemo/Dockerfile -c ${WORKSPACE} --force --destination=${ECR_REPO}/${ECR_REPO_NAME}:$BUILD_NUMBER --destination=${ECR_REPO}/${ECR_REPO_NAME}:latest
                     '''
                     }
