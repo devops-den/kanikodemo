@@ -34,7 +34,16 @@ spec:
     - /bin/bash
     tty: true
   - name: kaniko
-    image: gcr.io/kaniko-project/executor:debug 
+    image: gcr.io/kaniko-project/executor:debug
+    volumeMounts:
+      - name: docker-config
+        mountPath: /kaniko/.docker/
+      # when not using instance role
+      - name: aws-secret
+        mountPath: /root/.aws/
+    env:
+      - name: AWS_REGION
+        value: us-west-2
     resources:
       requests:
         cpu: 500m
@@ -45,6 +54,14 @@ spec:
     command:
     - /busybox/sh
     tty: true
+  volumes:
+    - name: docker-config
+      configMap:
+        name: docker-config
+    # when not using instance role
+    - name: aws-secret
+      secret:
+        secretName: aws-secret
 '''
         }
     }
